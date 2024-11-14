@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GunwaProvider } from './Context/GunwaContext';
-// import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
-// import TermsOfService from './Components/TermsOfService/TermsOfService';
-// import CookiePolicy from './Components/CookiePolicy/CookiePolicy';
+import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
+import TermsOfService from './Components/TermsOfService/TermsOfService';
+import CookiePolicy from './Components/CookiePolicy/CookiePolicy';
 
 // Import components using React.lazy for code splitting
 const Header = React.lazy(() => import('./Components/Header/Header'));
@@ -138,7 +138,7 @@ function App() {
                       </Suspense>
                     } 
                   />
-                  {/* <Route 
+                  <Route 
                     path="/privacy" 
                     element={
                       <Suspense fallback={<LoadingFallback />}>
@@ -161,7 +161,7 @@ function App() {
                         <CookiePolicy />
                       </Suspense>
                     } 
-                  /> */}
+                  />
                 </Routes>
               </main>
               <Footer />

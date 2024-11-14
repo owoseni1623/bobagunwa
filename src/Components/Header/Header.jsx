@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { useGunwa } from '../../Context/GunwaContext';
 import { useNavigate } from 'react-router-dom';
-import "./Header.css";
+import './Header.css'
 
 const Header = () => {
   const {
@@ -46,7 +46,12 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      // Only close if clicking outside menu area and menu button
+      if (
+        menuRef.current && 
+        !menuRef.current.contains(event.target) &&
+        !event.target.closest('.mobile-menu-button')
+      ) {
         setIsMobileMenuOpen(false);
       }
       if (ageDropdownRef.current && !ageDropdownRef.current.contains(event.target)) {
@@ -59,14 +64,15 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    // Handle body scroll lock
     if (isMobileMenuOpen) {
-      document.body.classList.add('menu-open');
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
     }
     
     return () => {
-      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
     };
   }, [isMobileMenuOpen]);
 
@@ -75,7 +81,8 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (e) => {
+    e.stopPropagation(); // Prevent event from bubbling
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -103,6 +110,7 @@ const Header = () => {
           className="mobile-menu-button"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          aria-expanded={isMobileMenuOpen}
         >
           <Menu size={24} />
         </button>
@@ -140,6 +148,7 @@ const Header = () => {
             <button 
               className="age-dropdown-trigger"
               onClick={() => setIsAgeDropdownOpen(!isAgeDropdownOpen)}
+              aria-expanded={isAgeDropdownOpen}
             >
               {ageGroup || 'Age Range'}
               <ChevronDown size={20} />
@@ -164,6 +173,7 @@ const Header = () => {
           <button 
             className="icon-button" 
             onClick={() => setIsSearchVisible(!isSearchVisible)}
+            aria-label="Toggle search"
           >
             <Search size={20} />
           </button>
@@ -192,13 +202,22 @@ const Header = () => {
         </div>
       )}
 
-      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
-        <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} ref={menuRef}>
+      {/* Mobile Menu */}
+      <div 
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <div 
+          className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} 
+          ref={menuRef}
+          onClick={(e) => e.stopPropagation()}
+        >
           <div className="mobile-menu-header">
             <h3>Menu</h3>
             <button 
-              className="icon-button" 
+              className="mobile-menu-close"
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
             >
               <X size={24} />
             </button>
