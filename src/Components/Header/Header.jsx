@@ -171,9 +171,9 @@ const Header = () => {
           >
             <Search size={20} />
           </button>
-          <button className="icon-button" onClick={toggleTheme}>
+          {/* <button className="icon-button" onClick={toggleTheme}>
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
+          </button> */}
         </div>
       </div>
 
