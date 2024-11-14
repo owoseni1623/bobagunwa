@@ -11,7 +11,6 @@ import "./Header.css";
 
 const Header = () => {
   const {
-    theme,
     isHeaderExpanded,
     setIsHeaderExpanded,
     ageGroup,
@@ -81,7 +80,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`app-header ${theme} ${isHeaderExpanded ? 'expanded' : ''}`}>
+    <header className={`app-header ${isHeaderExpanded ? 'expanded' : ''}`}>
       <div className="header-main">
         <div className="header-left">
           <div 
@@ -171,7 +170,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Added Expanded Header Section */}
       {isHeaderExpanded && (
         <div className="expanded-header desktop-only">
           <div className="expanded-content">
