@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useGunwa } from '../../Context/GunwaContext';
 import { FaUsers, FaCalendarAlt, FaUserCircle, FaBullhorn } from 'react-icons/fa';
 import { BiNetworkChart, BiBookReader } from 'react-icons/bi';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
+// import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Home.css'
@@ -123,13 +123,13 @@ const Home = () => {
       <div className="background-logo"></div>
       
       {/* Theme Toggle */}
-      <button 
+      {/* <button 
         className="theme-toggle"
         onClick={toggleTheme}
         aria-label="Toggle theme"
       >
         {theme === 'dark' ? <MdLightMode /> : <MdDarkMode />}
-      </button>
+      </button> */}
 
       {/* Scroll to Top */}
       <button 

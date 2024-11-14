@@ -8,10 +8,10 @@
   overflow-x: hidden;
 }
 
-.home-container.dark {
+/* .home-container.dark {
   background: linear-gradient(to right, #1c1c1c 0%, #000000 100%);
   color: #f0f0f0;
-}
+} */
 
 /* Theme Toggle */
 .theme-toggle {
