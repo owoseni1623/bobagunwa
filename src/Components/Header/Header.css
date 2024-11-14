@@ -1,5 +1,5 @@
 /* Global Styles */
-:root {
+/* :root {
   --primary-color: #FF6B6B;
   --secondary-color: #4ECDC4;
   --text-color: #333333;
@@ -14,7 +14,7 @@
   --text-muted: #aaaaaa;
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: var(--dark-shadow-color);
-}
+} */
 
 /* Header Styles */
 .app-header {
