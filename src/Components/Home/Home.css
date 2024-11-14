@@ -14,7 +14,7 @@
 } */
 
 /* Theme Toggle */
-.theme-toggle {
+/* .theme-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -32,7 +32,7 @@
 .theme-toggle:hover {
   transform: rotate(180deg);
   background: rgba(231, 76, 60, 0.1);
-}
+} */
 
 /* Scroll to Top Button */
 .scroll-to-top {
