@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronDown,
   Search,
-  Sun,
-  Moon,
   X,
   Menu
 } from 'lucide-react';
@@ -14,7 +12,6 @@ import "./Header.css";
 const Header = () => {
   const {
     theme,
-    toggleTheme,
     isHeaderExpanded,
     setIsHeaderExpanded,
     ageGroup,
@@ -171,9 +168,6 @@ const Header = () => {
           >
             <Search size={20} />
           </button>
-          {/* <button className="icon-button" onClick={toggleTheme}>
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button> */}
         </div>
       </div>
 
