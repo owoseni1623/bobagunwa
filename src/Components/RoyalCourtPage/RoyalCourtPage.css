@@ -1,0 +1,411 @@
+/* Base Page Layout */
+.roy012-royal-court-page {
+    min-height: 100vh;
+    background: linear-gradient(to right, #000000 0%, #1a1a1a 100%);
+    padding: 2rem;
+    position: relative;
+  }
+  
+  /* Header Styles */
+  .roy012-royal-court-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(218,165,32,0.2));
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(218,165,32,0.2);
+  }
+  
+  .roy012-royal-court-header h1 {
+    color: #DAA520;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .roy012-royal-court-header p {
+    color: #FFD700;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  /* View Toggle Styles */
+  .roy012-view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .roy012-toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 2px solid #DAA520;
+    color: #DAA520;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .roy012-toggle-button:hover {
+    background: rgba(218,165,32,0.1);
+  }
+  
+  .roy012-toggle-button.active {
+    background: #DAA520;
+    color: #000000;
+  }
+  
+  /* Container Styles */
+  .roy012-royal-court-container {
+    padding: 1rem;
+  }
+  
+  .roy012-royal-court-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .roy012-royal-court-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grid View Card Styles */
+  .roy012-royal-member-card {
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(218,165,32,0.3);
+  }
+  
+  .roy012-royal-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(218,165,32,0.3);
+  }
+  
+  .roy012-member-image-container {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+  }
+  
+  .roy012-member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .roy012-royal-member-card:hover .roy012-member-image {
+    transform: scale(1.05);
+  }
+  
+  .roy012-member-info {
+    padding: 1.5rem;
+    background: linear-gradient(to right, #000000, rgba(218,165,32,0.1));
+  }
+  
+  .roy012-member-title {
+    color: #DAA520;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .roy012-member-name {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .roy012-member-role {
+    color: #C0C0C0;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  /* List View Styles */
+  .roy012-royal-member-list-item {
+    display: flex;
+    gap: 2rem;
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    border-radius: 15px;
+    padding: 1.5rem;
+    cursor: pointer;
+    border: 1px solid rgba(218,165,32,0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .roy012-royal-member-list-item:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 5px 20px rgba(218,165,32,0.2);
+  }
+  
+  .roy012-list-image-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .roy012-list-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .roy012-royal-member-list-item:hover .roy012-list-image {
+    transform: scale(1.05);
+  }
+  
+  .roy012-list-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .roy012-list-header {
+    margin-bottom: 1rem;
+  }
+  
+  .roy012-list-title {
+    color: #DAA520;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .roy012-list-name {
+    color: #FFD700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .roy012-list-role {
+    color: #C0C0C0;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .roy012-list-preview {
+    color: #FFFFFF;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+  
+  /* Modal Styles */
+  .roy012-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  
+  .roy012-modal-content {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    position: relative;
+    border: 2px solid #DAA520;
+    box-shadow: 0 0 30px rgba(218,165,32,0.3);
+  }
+  
+  .roy012-modal-body {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-height: calc(90vh - 4rem);
+    overflow-y: auto;
+  }
+  
+  .roy012-modal-body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .roy012-modal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  .roy012-modal-body::-webkit-scrollbar-thumb {
+    background: #DAA520;
+    border-radius: 4px;
+  }
+  
+  .roy012-modal-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #DAA520;
+    flex-shrink: 0;
+  }
+  
+  .roy012-modal-info {
+    flex: 1;
+    color: #FFFFFF;
+  }
+  
+  .roy012-modal-info h2 {
+    color: #DAA520;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .roy012-modal-info h3 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .roy012-modal-info .roy012-role {
+    color: #C0C0C0;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .roy012-modal-info .roy012-description {
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .roy012-achievements,
+  .roy012-initiatives,
+  .roy012-responsibilities {
+    margin-bottom: 2rem;
+  }
+  
+  .roy012-modal-info h4 {
+    color: #DAA520;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(218,165,32,0.3);
+    padding-bottom: 0.5rem;
+  }
+  
+  .roy012-modal-info ul {
+    list-style: none;
+    padding-left: 1.5rem;
+  }
+  
+  .roy012-modal-info li {
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .roy012-modal-info li::before {
+    content: "◆";
+    color: #DAA520;
+    position: absolute;
+    left: -1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .roy012-quote {
+    font-style: italic;
+    color: #DAA520;
+    padding: 1.5rem;
+    border-left: 3px solid #DAA520;
+    background: rgba(218,165,32,0.1);
+    border-radius: 0 10px 10px 0;
+    margin-top: 2rem;
+  }
+  
+  .roy012-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #DAA520;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .roy012-close-button:hover {
+    background: rgba(218,165,32,0.2);
+    transform: rotate(90deg);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .roy012-royal-court-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .roy012-modal-body {
+      flex-direction: column;
+    }
+    
+    .roy012-modal-image {
+      width: 100%;
+      height: 300px;
+    }
+  
+    .roy012-royal-member-list-item {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .roy012-list-image-container {
+      width: 100%;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roy012-royal-court-header h1 {
+      font-size: 2rem;
+    }
+  
+    .roy012-royal-court-page {
+      padding: 1rem;
+    }
+  
+    .roy012-royal-court-header {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .roy012-toggle-button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
