@@ -445,12 +445,12 @@ const BirthdayCelebration = () => {
   );
 };
 
-const formatDate = (date, showYear = false) => {
+const formatDate = (date) => {
   const d = new Date(date);
   d.setMinutes(d.getMinutes() + d.getTimezoneOffset());
   const month = d.toLocaleString('default', { month: 'short' });
   const day = d.getDate();
-  return showYear ? d.toLocaleDateString() : `${month} ${day}`;
+  return `${month} ${day}`;
 };
 
 const MemberPage = () => {
@@ -618,7 +618,6 @@ const MemberPage = () => {
                   </div>
                   <div className="member-metadata">
                     <span>Date of Birth: {formatDate(member.dateOfBirth)}</span>
-                    <span>Birth Year: {member.birthYear}</span>
                     <span>Joined: {formatDate(member.joinDate)}</span>
                     <span>Contributions: {member.contributions}</span>
                   </div>
@@ -695,15 +694,11 @@ const MemberPage = () => {
                   </div>
                   <div className="stat">
                     <span>Date of Birth</span>
-                    <span>{formatDate(selectedMember.dateOfBirth, showMemberYear)}</span>
-                  </div>
-                  <div className="stat">
-                    <span>Birth Year</span>
-                    <span>{selectedMember.birthYear}</span>
+                    <span>{formatDate(selectedMember.dateOfBirth)}</span>
                   </div>
                   <div className="stat">
                     <span>Joined</span>
-                    <span>{formatDate(selectedMember.joinDate, showMemberYear)}</span>
+                    <span>{formatDate(selectedMember.joinDate)}</span>
                   </div>
                   <div className="stat">
                     <span>Contributions</span>
