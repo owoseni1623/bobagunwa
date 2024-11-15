@@ -2,7 +2,7 @@ export const initialRoyalCourtData = [
   {
     id: 1,
     title: 'Kabiyesi',
-    fullName: 'Oba Adenugba Adesanya',
+    fullName: 'Oba Abdul Rasaq Adesina Adenugba',
     role: 'King',
     description: 'His Royal Majesty, the paramount ruler of Ago-Iwoye Kingdom, stands as a beacon of wisdom and progress in our community. With a deep commitment to both traditional values and modern development, Kabiyesi has led numerous initiatives that have transformed our kingdom while preserving our rich cultural heritage. His reign has been marked by significant technological advancements, educational reforms, and economic growth, all while maintaining the sacred traditions that define our people.',
     imageUrl: '/Images/oba.jpg',
@@ -19,9 +19,9 @@ export const initialRoyalCourtData = [
   {
     id: 2,
     title: 'Olori',
-    fullName: 'Olori Adebimpe Adesanya',
+    fullName: 'Olori Adebimpe Adenugba',
     role: 'Queen',
-    description: 'Her Royal Majesty, the Queen of Ago-Iwoye Kingdom, has revolutionized the role of women in our community through her tireless advocacy and innovative programs. As a former educator, she brings a unique perspective to the palace, combining traditional values with modern approaches to community development. Her influence extends beyond the palace walls, touching lives through various social welfare programs and educational initiatives.',
+    description: 'Her Royal Majesty, the Queen of Ago-Iwoye Kingdom, has revolutionized the role of women in our community through her tireless advocacy and innovative programs. As an educator, she brings a unique perspective to the palace, combining traditional values with modern approaches to community development. Her influence extends beyond the palace walls, touching lives through various social welfare programs and educational initiatives.',
     imageUrl: '/Images/olori.jpg',
     yearJoined: 2010,
     initiatives: [
@@ -171,27 +171,27 @@ export const initialRoyalCourtData = [
   },
   
   {
-    id: 7,
-    title: 'Chairman World K Oil & Gas',
-    fullName: 'Giwa Kola Onakoya',
-    role: 'Akeweje',
-    description: 'Giwa Kola Onakoya, our distinguished Akeweje, serves as the chief custodian of our community\'s rich musical and cultural heritage. With an extensive knowledge of traditional music, dance, and ceremonial practices, she plays a crucial role in preserving and promoting our cultural identity. Her innovative approaches to cultural preservation have helped maintain the relevance of our traditions in modern times, particularly among the younger generation.',
-    imageUrl: '/Images/akeweje1.jpg',
-    yearAppointed: 2015,
-    responsibilities: [
-      'Preservation and performance of traditional royal praise songs',
-      'Training of younger generations in traditional music and dance',
-      'Documentation of historical events through oral traditions',
-      'Organization of cultural festivals and ceremonies',
-      'Maintenance of traditional musical instruments and artifacts'
+    "id": 7,
+    "title": "Chairman World K Oil & Gas",
+    "fullName": "Giwa Kola Onakoya",
+    "role": "Akeweje",
+    "description": "Giwa Kola Onakoya, our distinguished Akeweje, serves as the chief custodian of our community's rich musical and cultural heritage. With an extensive knowledge of traditional music, ceremonial practices, and leadership in cultural preservation, he plays a crucial role in promoting and safeguarding our cultural identity. His innovative approaches to cultural preservation have helped maintain the relevance of our traditions in modern times, particularly among the younger generation.",
+    "imageUrl": "/Images/akeweje1.jpg",
+    "yearAppointed": 2015,
+    "responsibilities": [
+        "Preservation and performance of traditional royal praise songs",
+        "Training of younger men in traditional music and ceremonial leadership",
+        "Documentation of historical events through oral traditions",
+        "Organization of cultural festivals and ceremonies",
+        "Maintenance of traditional musical instruments and artifacts"
     ],
-    achievements: [
-      'Documentation of traditional songs and chants',
-      'Establishment of youth cultural programs',
-      'Organization of annual cultural festivals',
-      'Creation of digital archives for cultural preservation'
+    "achievements": [
+        "Documentation of traditional songs and chants",
+        "Establishment of youth cultural programs",
+        "Organization of annual cultural festivals",
+        "Creation of digital archives for cultural preservation"
     ]
-  },
+},
   {
     id: 8,
     title: 'Otunba',

@@ -16,21 +16,15 @@ const POSITIONS = [
 
 const getDaysUntilBirthday = (dateOfBirth) => {
   const today = new Date();
-  today.setHours(0, 0, 0, 0);  // Reset time portion to midnight
-  
-  // Create date object and adjust for timezone offset
+  today.setHours(0, 0, 0, 0);  
   const birthday = new Date(dateOfBirth);
   birthday.setMinutes(birthday.getMinutes() + birthday.getTimezoneOffset());
   const currentYear = today.getFullYear();
-  
   const nextBirthday = new Date(currentYear, birthday.getMonth(), birthday.getDate());
-  nextBirthday.setHours(0, 0, 0, 0);  // Reset time portion to midnight
-  
-  // If the birthday has already occurred this year, get next year's date
+  nextBirthday.setHours(0, 0, 0, 0);
   if (today > nextBirthday) {
     nextBirthday.setFullYear(currentYear + 1);
   }
-  
   const diffTime = nextBirthday - today;
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 };
@@ -51,7 +45,6 @@ const BirthdayStar = ({ style }) => (
 
 const BirthdayCelebration = () => {
   const [stars, setStars] = useState([]);
-
   useEffect(() => {
     const newStars = Array.from({ length: 20 }, (_, i) => ({
       id: i,
@@ -70,18 +63,22 @@ const BirthdayCelebration = () => {
         <BirthdayStar key={star.id} style={star.style} />
       ))}
       <div className="birthday-wishes-card">
-        {/* <div className="wish-text-card">Happy Birthday Our Own Gunwa! 🎉</div> */}
         <h1 className="wish-text-card">Happy Birthday Our Own Gunwa! 🎉</h1>
       </div>
     </div>
   );
 };
 
-const formatDate = (date) => {
-  // Create new date object and adjust for timezone
+const formatDate = (date, showYear = false) => {
   const d = new Date(date);
   d.setMinutes(d.getMinutes() + d.getTimezoneOffset());
-  return d.toLocaleDateString();
+  if (showYear) {
+    return d.toLocaleDateString();
+  } else {
+    const month = d.toLocaleString('default', { month: 'short' });
+    const day = d.getDate();
+    return `${month} ${day}`;
+  }
 };
 
 const MemberPage = () => {
@@ -102,6 +99,7 @@ const MemberPage = () => {
   const [isAddMemberModal, setIsAddMemberModal] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
+  const [showMemberYear, setShowMemberYear] = useState(false);
 
   const filteredMembers = members.filter(member => {
     const matchesSearch = 
@@ -325,7 +323,7 @@ const MemberPage = () => {
                   </div>
                   <div className="stat">
                     <span>Date of Birth</span>
-                    <span>{formatDate(selectedMember.dateOfBirth)}</span>
+                    <span>{formatDate(selectedMember.dateOfBirth, showMemberYear)}</span>
                   </div>
                   <div className="stat">
                     <span>Birth Year</span>
@@ -333,7 +331,7 @@ const MemberPage = () => {
                   </div>
                   <div className="stat">
                     <span>Joined</span>
-                    <span>{formatDate(selectedMember.joinDate)}</span>
+                    <span>{formatDate(selectedMember.joinDate, showMemberYear)}</span>
                   </div>
                   <div className="stat">
                     <span>Contributions</span>
@@ -342,6 +340,14 @@ const MemberPage = () => {
                   <div className="stat">
                     <span>Last Active</span>
                     <span>{selectedMember.lastActive}</span>
+                  </div>
+                  <div className="stat">
+                    <button 
+                      className={`show-year ${showMemberYear ? 'active' : ''}`}
+                      onClick={() => setShowMemberYear(!showMemberYear)}
+                    >
+                      {showMemberYear ? 'Hide Year' : 'Show Year'}
+                    </button>
                   </div>
                 </div>
               </div>
