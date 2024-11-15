@@ -697,6 +697,10 @@ const MemberPage = () => {
                     <span>{formatDate(selectedMember.dateOfBirth)}</span>
                   </div>
                   <div className="stat">
+                    <span>Birth Year</span>
+                    <span>{showMemberYear ? selectedMember.birthYear : '****'}</span>
+                  </div>
+                  <div className="stat">
                     <span>Joined</span>
                     <span>{formatDate(selectedMember.joinDate)}</span>
                   </div>
