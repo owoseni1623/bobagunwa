@@ -17,7 +17,7 @@ export const fullMemberData = [
       dateOfBirth: "1981-11-15",
       occupation: "Business",
       location: "Ago Iwoye",
-      imageUrl: "/Images/gunwaa1.jpg",
+      imageUrl: "/Images/gunwac1.jpg",
       contributions: 42,
       lastActive: "2024-11-01"
   },
