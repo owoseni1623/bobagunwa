@@ -555,6 +555,20 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
+.show-year {
+  background: none;
+  border: none;
+  color: #FFD700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  }
+  .show-year.active {
+  color: #FFF;
+  }
+  .show-year:hover {
+  color: #FFF;
+  }
 
 .stat {
   background: rgba(255, 255, 255, 0.1);
