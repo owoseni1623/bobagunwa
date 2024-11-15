@@ -142,7 +142,7 @@ export const fullMemberData = [
       joinDate: "2021-09-20",
       status: "active",
       birthYear: "1982",
-      dateOfBirth: "1981-03-04",
+      dateOfBirth: "1981-04-03",
       occupation: "Politics/Farmer",
       location: "Ago Iwoye",
       imageUrl: "/Images/idera.jpg",
