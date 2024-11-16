@@ -1,5 +1,5 @@
 /* TermsOfService.css */
-/* :root {
+:root {
     --gold-primary: #FFD700;
     --gold-secondary: #FFDF00;
     --gold-accent: #DAA520;
@@ -9,7 +9,7 @@
     --black-gradient: linear-gradient(135deg, var(--black-primary), var(--black-secondary));
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     --gold-glow: 0 0 20px rgba(255, 215, 0, 0.3);
-  } */
+  }
   
   .terms-container {
     max-width: 1200px;
