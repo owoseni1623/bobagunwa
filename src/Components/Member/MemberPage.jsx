@@ -500,7 +500,7 @@ const MemberPage = () => {
             <span className="stat-label">Active Members</span>
           </div>
           <div className="stat-box">
-            <span className="stat-number">{ageGroup || '1980-1982'}</span>
+            <span className="stat-number">{ageGroup || '1980-1981-1982'}</span>
             <span className="stat-label">Age Group</span>
           </div>
         </div>
