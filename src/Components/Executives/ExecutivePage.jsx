@@ -14,7 +14,7 @@ const ExecutiveTeam = () => {
     {
       id: 1,
       name: 'Gunwa Emida Adesina',
-      position:Chairman',
+      position: 'Chairman',
       image: '/Images/gunwac1.jpg',
       email: 'emidasinang@gmail.com',
       phone: '+234 803 441 7149',
