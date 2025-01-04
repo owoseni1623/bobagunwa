@@ -23,7 +23,7 @@ const ExecutiveTeam = () => {
       yearJoined: 2021,
       status: 'active',
       isLeadership: true,
-      bio: 'Gunwa Emida Adesina is the Ag. Chairman of the organization, leading the team with a wealth of experience and a deep commitment to the community. With over 20 years of leadership experience in the non-profit sector, Gunwa Emida has been instrumental in driving the organization initiatives and fostering collaborative partnerships to amplify its impact.',
+      bio: 'Gunwa Emida Adesina is the Chairman of the organization, leading the team with a wealth of experience and a deep commitment to the community. With over 20 years of leadership experience in the non-profit sector, Gunwa Emida has been instrumental in driving the organization initiatives and fostering collaborative partnerships to amplify its impact.',
       numInitiatives: 12,
       numEvents: 24
     },
