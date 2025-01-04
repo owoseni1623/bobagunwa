@@ -23,7 +23,7 @@ const ExecutiveTeam = () => {
       yearJoined: 2021,
       status: 'active',
       isLeadership: true,
-      bio: 'Gunwa Emida Adesina is the Chairman of the organization, leading the team with a wealth of experience and a deep commitment to the community. With over 20 years of leadership experience in the non-profit sector, Gunwa Emida has been instrumental in driving the organization initiatives and fostering collaborative partnerships to amplify its impact.',
+      bio: 'Gunwa Emida Adesina is the Chairman of the organization, leading the team with a wealth of experience and a deep commitment to the community. With many years of leadership experience in the non-profit sector, Gunwa Emida has been instrumental in driving the organization initiatives and fostering collaborative partnerships to amplify its impact.',
       numInitiatives: 12,
       numEvents: 24
     },
@@ -55,7 +55,7 @@ const ExecutiveTeam = () => {
       yearJoined: 2021,
       status: 'active',
       isLeadership: true,
-      bio: 'Gunwa Sunday Babalola, the Vice Chairman, is a respected leader who works tirelessly to support the organization\'s mission and objectives. With a deep understanding of the local community and a proven track record in project management, Gunwa Sunday has been instrumental in ensuring the seamless execution of the organization initiatives.',
+      bio: 'Gunwa Sunday Babalola, the Vice Chairman, is a respected leader who works tirelessly to support the organizations mission and objectives. With a deep understanding of the local community and a proven track record in project management, Gunwa Sunday has been instrumental in ensuring the seamless execution of the organization initiatives.',
       numInitiatives: 10,
       numEvents: 18
     },
@@ -70,7 +70,7 @@ const ExecutiveTeam = () => {
       ageGroup: '1980-1981-1982',
       yearJoined: 2021,
       status: 'active',
-      bio: 'Gunwa Adebambo Ademoye plays a crucial role in maintaining the organization\'s records and ensuring smooth operations. With meticulous attention to detail and strong administrative skills, manages the team\'s documentation and correspondence efficiently.',
+      bio: 'Gunwa Adebambo Ademoye plays a crucial role in maintaining the organizations records and ensuring smooth operations. With meticulous attention to detail and strong administrative skills, manages the team\'s documentation and correspondence efficiently.',
       numInitiatives: 8,
       numEvents: 22
     },

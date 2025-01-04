@@ -35,7 +35,7 @@ export const fullMemberData = [
   },
   {
       id: 3,
-      name: "Gunwa Tosin Adeyemi",
+      name: "Gunwa Sunday Babalola",
       position: "Vice Chairman",
       email: "pics13@example.com",
       phone: "+234 803 234 5673",
@@ -43,7 +43,7 @@ export const fullMemberData = [
       status: "active",
       occupation: "Lawyer",
       location: "Ago Iwoye",
-      imageUrl: "/Images/gunwaa.jpg",
+      imageUrl: "/Images/gunwa0.jpg",
       contributions: 35,
       lastActive: "2024-10-15"
   },

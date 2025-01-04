@@ -173,7 +173,7 @@ export const initialRoyalCourtData = [
   {
     "id": 7,
     "title": "Chairman World K Oil & Gas",
-    "fullName": "Giwa Kola Onakoya",
+    "fullName": "Kola Onakoya",
     "role": "Akeweje",
     "description": "Giwa Kola Onakoya, our distinguished Akeweje, serves as the chief custodian of our community's rich musical and cultural heritage. With an extensive knowledge of traditional music, ceremonial practices, and leadership in cultural preservation, he plays a crucial role in promoting and safeguarding our cultural identity. His innovative approaches to cultural preservation have helped maintain the relevance of our traditions in modern times, particularly among the younger generation.",
     "imageUrl": "/Images/akeweje1.jpg",
