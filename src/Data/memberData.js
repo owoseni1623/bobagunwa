@@ -581,14 +581,14 @@ export const fullMemberData = [
 },
 {
     id: 44,
-    name: "Bobagunwa Asiwaju",
+    name: "Gunwa Idowu Ariyo",
     email: "pics14_44@example.com",
     phone: "+234 844 234 5714",
     joinDate: "2024-08-15",
     status: "active",
     occupation: "Civil Engineer",
-    location: "Lagos",
-    imageUrl: "/Images/gunwa logo.jpg",
+    location: "Ago Iwoye",
+    imageUrl: "/Images/guuwao.jpg",
     contributions: 39,
     lastActive: "2024-11-07"
 },
