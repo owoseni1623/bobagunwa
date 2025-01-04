@@ -17,7 +17,7 @@ const RoyalCourtPage = () => {
     document.title = 'Royal Court - Age Group Platform';
   }, []);
 
-  const RoyalMemberCard = ({ member }) => {
+  const RoyalMemberCard = ({ member, index }) => {
     if (viewMode === 'grid') {
       return (
         <div className="roy012-royal-member-card" onClick={() => viewRoyalMemberDetails(member)}>
@@ -93,7 +93,7 @@ const RoyalCourtPage = () => {
                   <h4>Achievements</h4>
                   <ul>
                     {selectedRoyalMember.achievements.map((achievement, index) => (
-                      <li key={index}>{achievement}</li>
+                      <li key={`achievement-${index}`}>{achievement}</li>
                     ))}
                   </ul>
                 </div>
@@ -104,7 +104,7 @@ const RoyalCourtPage = () => {
                   <h4>Initiatives</h4>
                   <ul>
                     {selectedRoyalMember.initiatives.map((initiative, index) => (
-                      <li key={index}>{initiative}</li>
+                      <li key={`initiative-${index}`}>{initiative}</li>
                     ))}
                   </ul>
                 </div>
@@ -115,7 +115,7 @@ const RoyalCourtPage = () => {
                   <h4>Responsibilities</h4>
                   <ul>
                     {selectedRoyalMember.responsibilities.map((responsibility, index) => (
-                      <li key={index}>{responsibility}</li>
+                      <li key={`responsibility-${index}`}>{responsibility}</li>
                     ))}
                   </ul>
                 </div>
@@ -141,8 +141,12 @@ const RoyalCourtPage = () => {
         <ViewToggle />
       </div>
       <div className={`roy012-royal-court-container ${viewMode === 'list' ? 'list-view' : 'grid-view'}`}>
-        {royalCourt.map(member => (
-          <RoyalMemberCard key={member.id} member={member} />
+        {royalCourt.map((member, index) => (
+          <RoyalMemberCard 
+            key={`${member.id}-${index}`} 
+            member={member} 
+            index={index}
+          />
         ))}
       </div>
       {isRoyalMemberModalOpen && <RoyalMemberModal />}
